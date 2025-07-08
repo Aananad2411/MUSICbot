@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: anu_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  bot:
+    build: .
+    container_name: anu_music_bot
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - redis
