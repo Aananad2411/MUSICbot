@@ -1,6 +1,5 @@
 pyrogram==2.0.106
 tgcrypto
-pytgcalls==4.0.0.dev2
+pytgcalls==3.0.0.dev21
+python-dotenv
 redis
-youtube_dl
-aiohttp
